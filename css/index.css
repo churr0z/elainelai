@@ -1,13 +1,53 @@
-.italicize{
-    font-style: italic;
+.italicize {
+  font-style: italic;
 }
 
 .bg-primary {
-    --bs-bg-opacity: 1;
-    background-color: rgb(128, 180, 128)
-  }
+  --bs-bg-opacity: 1;
+  background-color: rgb(128, 180, 128);
+}
 
-  .text-primary {
-    --bs-text-opacity: 1;
-    color: rgb(128, 180, 128)
-  }
+.text-primary {
+  --bs-text-opacity: 1;
+  color: rgb(128, 180, 128);
+}
+
+#email {
+  color: rgb(128, 180, 128);
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+/*email button*/
+#email:hover {
+  color: pink;
+}
+
+#email:active {
+  color: pink;
+  opacity: 50%;
+}
+
+/*personal site buttons*/
+.social-icons .social-icon:hover {
+  background-color: rgb(128, 180, 128);
+}
+
+.social-icons .social-icon:active {
+  opacity: 50%;
+}
+
+/*projects links*/
+.URLpop {
+  color: rgb(104, 148, 104);
+}
+.URLpop:hover {
+  color: pink;
+}
+
+.URLpop:active {
+  color: pink;
+  opacity: 50%;
+}
