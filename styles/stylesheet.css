@@ -1,0 +1,498 @@
+
+body{
+  font-family: 'Roboto', sans-serif;
+}
+
+.container{
+  text-align: center;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.intro, .projects, .about, .techstack{
+  padding-bottom: 30px;
+}
+
+h1, p{
+  color: rgb(126, 126, 165)
+}
+
+button{
+  border-radius: 8px;
+  padding: 5px 10px;
+  font-size: 15px;
+}
+
+button:hover{
+  background-color: rgb(126, 126, 165);
+  color: white;
+  cursor: pointer;
+}
+
+#projectsTitle{
+  text-align:left;
+}
+
+#exploreProjectHover{
+  text-align: left;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+#aboutMePhoto{
+  width: 250px;
+}
+
+#headshot{
+  border-radius: 50%;
+  width: 200px;
+}
+
+.intro {
+  width: 100%;
+  height: 100vh;
+  /* border: 1px solid black; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.intro_name{
+  font-size: 19px;
+  text-align: left;
+}
+
+/* PROJECTS */
+.projects {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center; 
+}
+
+#exploreProjectHover{
+  text-align: left;
+  font-weight: bold;
+  font-size: 12.5px;
+}
+
+.projectDescription{
+  color: white;
+  font-size: 14px;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.grid-item img {
+  width: 350px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 5px;
+  transition: transform 0.3s ease; 
+}
+
+.grid-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  margin-bottom: 10px;;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7); /* Adjust the alpha value for the desired transparency */
+  color: #fff; /* Text color for the overlay */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease; /* Add a smooth transition effect */
+  border-radius: 10px;
+}
+
+.grid-item:hover .overlay {
+  opacity: 1;
+}
+
+.grid-item.one{
+  background-color: #eeeeff;
+}
+.grid-item.two{
+  background-color: #d0d0ec;
+}
+.grid-item.three{
+  background-color: #d0d0ec;
+}
+.grid-item.four{
+  background-color: #eeeeff;
+}
+
+.gridText {
+  font-size: 24px;
+  text-align: center;
+}
+
+/* ABOUT ME */
+.about{
+  width: 100%;
+  height: 100%;
+}
+
+.aboutMe{
+  text-align: left;
+  padding: 0px
+}
+
+.aboutMe p{
+  font-size: 19px;
+  margin-top: 40px;
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-bottom: 20px;
+} 
+
+/* TECH STACK */
+.techstack{
+  width: 100%;
+  height: 100%;
+}
+
+.techstack h1{
+  text-align: left;
+}
+
+.skills{
+  max-width: 100%;
+  align-items: center;
+}
+
+/* tech stack skills list */
+.toolboxContainer{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-row-gap: 15px;
+  margin-bottom: 50px;
+}
+
+.toolboxIcons{
+  font-size: 2.5em;
+}
+
+#powershell{
+  width: 40px;
+}
+
+/* CONNECT */
+body,html {
+  margin: 0;
+  padding: 0;
+}
+
+.connectSection {
+  width: 100%;
+  height: 20vh; /* Full viewport height */
+  background-color: #eeeeff; 
+}
+
+.connect {
+  background-color: #eeeeff; 
+  box-sizing: border-box; /* Include padding in element's total width */
+  width: 100%;
+  height: 100%; /* Full height of the container */
+  text-align: center;
+  padding-left: 50px;
+  padding-right: 50px;
+
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.connect h1{
+  font-size: 25px;
+}
+
+.connect img{
+  width: 30px;
+  margin: 0px;
+  padding: 0px;
+}
+
+#linkedinProfile{
+  vertical-align: middle;
+  margin-bottom: 5px;
+  text-decoration: none;
+  color: black
+}
+
+#linkedinProfile:hover{
+  color: #bdbdee;
+}
+
+.footer{
+  background-color: #d0d0ec;
+  text-align: center;
+  padding: 20px;
+}
+
+.footer p{
+  margin: 0px;
+  font-size: 12px;
+}
+
+#elLogo{
+  width: 20px;
+  vertical-align: middle;
+  margin-bottom: 10px;
+}
+
+
+/**** mobile ****/
+@media (min-width: 540px) {
+  body{
+    /* background-color: rgb(247, 201, 183); */
+  }
+  .intro {
+    width: 100%;
+    height: 100vh;
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .intro_name{
+    font-size: 19px;
+    text-align: left;
+    width: 75%;
+    padding-right: 10px;
+  }
+
+  .grid-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    grid-template-rows: repeat(2, 300px);
+    grid-gap: 10px;
+    margin: 40px;
+    height: 100%;
+    width: 100%;
+  }
+
+  .grid-item{
+    margin-bottom: 0px;;
+  }
+  
+  .grid-item img {
+    width: 320px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 5px;
+    transition: transform 0.3s ease; 
+  }
+
+  #aboutMePhoto{
+    padding-top: 30px;
+    width: 300px;
+  }
+
+  #exploreProjectHover{
+    text-align: left;
+    font-weight: bold;
+    font-size: 15px;
+  }
+
+  #python{
+    width: 50px;
+  }
+
+  /* tech stack skills list */
+  .toolboxContainer{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-row-gap: 15px;
+  }
+  
+  .toolboxIcons{
+    font-size: 3em;
+  }
+  
+  #powershell{
+    width: 42px;
+  }
+}
+
+/**** desktop ****/
+@media (min-width: 780px) {
+  body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container{
+    max-width: 650px; /* Set your desired maximum width */
+    width: 100%;
+  }
+
+   /* INTRO */
+  .intro {
+    width: 100%;
+    height: 100vh;
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .intro_name{
+    font-size: 19px;
+    text-align: left;
+    padding-right: 10px;
+    width: 75%
+  }
+
+  #headshot{
+    border-radius: 50%;
+    width: 250px;
+  }
+
+   /* ABOUT ME */
+  .about{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .aboutMe{
+    padding-right: 20px;
+  }
+
+  #aboutMePhoto{
+    width: 300px;
+    padding-right: 40px;
+  }
+
+  /* PROJECTS */
+  .projects {
+    width: 100%;
+    height: 100%;
+  }
+
+  .projectDescription{
+    color: white;
+    font-size: 15px;
+    margin-left: 25px;
+    margin-right: 25px;
+  }
+
+  /* TECH STACK */ 
+  .toolboxContainer{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-row-gap: 20px;
+    margin-bottom: 55px;
+  }
+
+  .toolboxIcons{
+    font-size: 3em;
+  }
+
+  #powershell{
+    width: 43px;
+  }
+
+  /* CONNECT */ 
+  body,html {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .connectSection {
+    width: 100%;
+    height: 20vh; /* Full viewport height */
+    background-color: #eeeeff; 
+  }
+  
+  .connect {
+    background-color: #eeeeff; /* Pink background color */
+    box-sizing: border-box; /* Include padding in element's total width */
+    width: 100%;
+    height: 100%; /* Full height of the container */
+    text-align: center;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .connect p{
+    font-size: 15px;
+  }
+
+  .footer p{
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 880px) {
+  .container{
+    max-width: 750px; /* Set your desired maximum width */
+    width: 100%;
+  }
+
+  #elLogo{
+    width: 20px;
+    vertical-align: middle;
+    margin-bottom: 5px;
+  }
+
+  .projectDescription{
+    color: white;
+    font-size: 16px;
+    margin-left: 25px;
+    margin-right: 25px;
+  }
+
+  .toolboxContainer{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  .toolboxIcons{
+    font-size: 3em;
+  }
+
+  #powershell{
+    width: 42px;
+  }
+}
+
+@media (min-width: 980px) {
+  .container{
+    max-width: 850px; /* Set your desired maximum width */
+    width: 100%;
+  }
+
+  
+}
+
+@media (min-width: 1200px) {
+  .container{
+    max-width: 1000px; /* Set your desired maximum width */
+    width: 100%;
+  }
+
+  li {
+    display: flex;
+    flex-direction: column; /* Display text under each list item */
+    margin: 35px 40px 35px 40px;;
+  }
+}
