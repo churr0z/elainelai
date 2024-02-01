@@ -1,12 +1,16 @@
 
 body{
-  font-family: 'Roboto', sans-serif;
+  font-family: myFont;
+  background-color: white;
+}
+
+@font-face{
+  font-family: myFont;
+  src: url('../fonts/Satoshi-Variable.ttf');
 }
 
 .container{
   text-align: center;
-  padding-left: 50px;
-  padding-right: 50px;
 }
 
 .intro, .projects, .about, .techstack{
@@ -14,33 +18,80 @@ body{
 }
 
 h1, p{
-  color: rgb(126, 126, 165)
+  color: black;
+}
+
+/* NAVBAR */
+nav {
+  padding-top: 15px;
+  padding-bottom: 0px;
+  width: 100%; /* Expand the navbar to 100% of the viewport width */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#navbarLine{
+  border: none;
+  height: 1px;
+  background-color: black;
+}
+
+#navLogo{
+  width: 40px;
+  height: 40px;
+  padding-left: 15px;
+}
+
+nav ul{
+  padding-right: 10px;
+}
+nav a {
+  color: black;
+  text-decoration: none;
+  background-image: linear-gradient(#98BED4, #98BED4);
+  background-size: 0% 0.1em;
+  background-position-y: 100%;
+  background-position-x: 0%;
+  background-repeat: no-repeat;
+  transition: background-size 0.2s ease-in-out;
+  padding: 0px;
+  padding-bottom: 3px;
+  margin: 5px 10px;
+}
+
+nav a:hover,
+nav a:focus,
+nav a:active {
+  background-size: 100% 0.1em;
+}
+nav ul{
+  list-style: none;
+}
+
+ul{
+  display: flex;
+  flex-direction: row;
 }
 
 button{
-  border-radius: 8px;
+  background-color: transparent;
+  color: white;
+  border-radius: 60px;;
   padding: 5px 10px;
   font-size: 15px;
+  border: 1px solid white;
 }
 
 button:hover{
-  background-color: rgb(126, 126, 165);
-  color: white;
+  background-color: white;
+  color: black;
   cursor: pointer;
-}
-
-#projectsTitle{
-  text-align:left;
-}
-
-#exploreProjectHover{
-  text-align: left;
-  font-weight: bold;
-  font-size: 12px;
 }
 
 #aboutMePhoto{
   width: 250px;
+  border-radius: 10px;
 }
 
 #headshot{
@@ -48,119 +99,98 @@ button:hover{
   width: 200px;
 }
 
+
+.sectionTitle{
+  margin-top: 0px;
+  margin-bottom: 15px;
+  margin-left: 15px;
+  padding-top: 40px;
+  width: 100%;
+}
+
+/* INTRO */
 .intro {
   width: 100%;
   height: 100vh;
-  /* border: 1px solid black; */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
+.intro_name h1{
+  font-size: 20px;
+}
 .intro_name{
-  font-size: 19px;
+  font-size: 20px;
   text-align: left;
+  margin: 20px;
 }
 
 /* PROJECTS */
-.projects {
-  display: flex;
-  flex-direction: column;
-  align-items: center; 
-  justify-content: center; 
+.projects{
+  background-color: black;
 }
 
-#exploreProjectHover{
-  text-align: left;
-  font-weight: bold;
-  font-size: 12.5px;
+#yogaImg, #shoppingCartImg, #parksImg{
+  width: 60%
+}
+
+.imageContainer{
+  display: flex;
+  position: relative;
+  width: 100%; /* Set your desired width */
+  height: 200px; /* Set your desired height */
+  overflow: hidden;
+  background-color: white; 
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.imageContainer #parkImg{
+  width: 100% 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.projects .sectionTitle{
+  color: white;
+  padding-top: 40px;
+  margin: 15px;
+}
+
+.projectTitle{
+  color: #98BED4;
 }
 
 .projectDescription{
   color: white;
-  font-size: 14px;
-  margin-left: 15px;
-  margin-right: 15px;
 }
 
-.grid-item img {
-  width: 350px;
-  height: auto;
-  object-fit: cover;
-  border-radius: 5px;
-  transition: transform 0.3s ease; 
+.theProject{
+  margin: 15px;
 }
 
-.grid-item {
-  position: relative;
-  overflow: hidden;
-  border-radius: 10px;
-  margin-bottom: 10px;;
-}
-
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.7); /* Adjust the alpha value for the desired transparency */
-  color: #fff; /* Text color for the overlay */
+.allProjects{
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  opacity: 0;
-  transition: opacity 0.3s ease; /* Add a smooth transition effect */
-  border-radius: 10px;
+  align-items: center;
 }
 
-.grid-item:hover .overlay {
-  opacity: 1;
+.technologiesBold{
+  font-weight: bold;
 }
-
-.grid-item.one{
-  background-color: #eeeeff;
+.projectButtons{
+  display: flex;
+  gap: 10px; 
 }
-.grid-item.two{
-  background-color: #d0d0ec;
-}
-.grid-item.three{
-  background-color: #d0d0ec;
-}
-.grid-item.four{
-  background-color: #eeeeff;
-}
-
-.gridText {
-  font-size: 24px;
-  text-align: center;
-}
-
-/* ABOUT ME */
-.about{
-  width: 100%;
-  height: 100%;
-}
-
-.aboutMe{
-  text-align: left;
-  padding: 0px
-}
-
-.aboutMe p{
-  font-size: 19px;
-  margin-top: 40px;
-  margin-left: 40px;
-  margin-right: 40px;
-  margin-bottom: 20px;
-} 
 
 /* TECH STACK */
 .techstack{
   width: 100%;
   height: 100%;
+  background-color: rgba(152, 190, 212, 0.2);
 }
 
 .techstack h1{
@@ -175,17 +205,62 @@ button:hover{
 /* tech stack skills list */
 .toolboxContainer{
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-row-gap: 15px;
-  margin-bottom: 50px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
 }
 
+.toolboxItem{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.toolboxItem p{
+  margin-top: 5px;
+}
 .toolboxIcons{
   font-size: 2.5em;
 }
 
 #powershell{
   width: 40px;
+}
+
+/* ABOUT ME */
+.about{
+  width: 100%;
+  height: 100%;
+}
+
+.techstack .sectionTitle{
+  text-align: left;
+}
+
+.about .sectionTitle{
+  text-align: left;
+}
+.aboutMe{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 0px;
+}
+
+.aboutBio, .aboutEducation{
+  text-align: left;
+  margin: 15px;
+}
+.educationDetails p{
+  margin: 0px;
+}
+
+.educationYear{
+  font-weight: bold;
+}
+
+.educationDetails{
+  font-size: 14px;
 }
 
 /* CONNECT */
@@ -196,49 +271,98 @@ body,html {
 
 .connectSection {
   width: 100%;
-  height: 20vh; /* Full viewport height */
-  background-color: #eeeeff; 
+  background-color: #98BED4; 
 }
 
 .connect {
-  background-color: #eeeeff; 
+  background-color: #98BED4; 
   box-sizing: border-box; /* Include padding in element's total width */
   width: 100%;
   height: 100%; /* Full height of the container */
-  text-align: center;
-  padding-left: 50px;
-  padding-right: 50px;
+  text-align: left;
 
   display:flex;
   flex-direction: column;
-  justify-content: center;
+}
+
+.linkedinIcon, .emailIcon, .githubIcon{
+  color: white;
+  margin-left: 10px;
+}
+
+.connect div{
+  margin-top: 10px;
+}
+
+.connect div span{
+  margin-left: 10px;
+  color: white;
+}
+
+hr{
+  color: white;
+  height: 5px;
+  margin: 0;
+  border-top: 0px; 
 }
 
 .connect h1{
+  color: white;
   font-size: 25px;
-}
-
-.connect img{
-  width: 30px;
-  margin: 0px;
-  padding: 0px;
+  margin-left: 10px;
 }
 
 #linkedinProfile{
   vertical-align: middle;
   margin-bottom: 5px;
   text-decoration: none;
-  color: black
+  color: white;
 }
 
 #linkedinProfile:hover{
-  color: #bdbdee;
+  color: #93a9b6;
+}
+
+.connect a{
+  text-decoration: none;
+  color: white;
+}
+
+.connect{
+  padding-bottom: 30px;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.typingName {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid white; /* You can change the border color */
+  font-size: 45px;
+  font-family: myFont;
+  src: url('../fonts/Satoshi-Variable.ttf');
+  animation: typing 8s steps(10, end) infinite; /* Adjust the duration as needed */
+}
+
+p.typingName{
+  color: white;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 80px;
 }
 
 .footer{
-  background-color: #d0d0ec;
+  background-color: white;
   text-align: center;
-  padding: 20px;
+  padding: 10px;
 }
 
 .footer p{
@@ -246,85 +370,43 @@ body,html {
   font-size: 12px;
 }
 
-#elLogo{
-  width: 20px;
-  vertical-align: middle;
-  margin-bottom: 10px;
+.footer a{
+  text-decoration: none;
+  color: green;
 }
-
 
 /**** mobile ****/
 @media (min-width: 540px) {
-  body{
-    /* background-color: rgb(247, 201, 183); */
-  }
   .intro {
     width: 100%;
     height: 100vh;
-    /* border: 1px solid black; */
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
   }
 
-  .intro_name{
-    font-size: 19px;
-    text-align: left;
-    width: 75%;
-    padding-right: 10px;
-  }
-
-  .grid-container{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); 
-    grid-template-rows: repeat(2, 300px);
-    grid-gap: 10px;
-    margin: 40px;
-    height: 100%;
-    width: 100%;
-  }
-
-  .grid-item{
-    margin-bottom: 0px;;
-  }
-  
-  .grid-item img {
-    width: 320px;
-    height: auto;
-    object-fit: cover;
-    border-radius: 5px;
-    transition: transform 0.3s ease; 
-  }
-
+  /* ABOUT ME */
   #aboutMePhoto{
-    padding-top: 30px;
-    width: 300px;
+    width: 270px;
+    border-radius: 10px;
   }
 
-  #exploreProjectHover{
-    text-align: left;
-    font-weight: bold;
+  .educationDetails{
     font-size: 15px;
   }
 
-  #python{
-    width: 50px;
-  }
-
-  /* tech stack skills list */
-  .toolboxContainer{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-row-gap: 15px;
-  }
-  
-  .toolboxIcons{
-    font-size: 3em;
-  }
-  
-  #powershell{
-    width: 42px;
+  /* PROJECTS */
+  .imageContainer{
+    display: flex;
+    position: relative;
+    width: 100%; /* Set your desired width */
+    height: 250px; /* Set your desired height */
+    overflow: hidden;
+    background-color: white; 
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
   }
 }
 
@@ -338,7 +420,7 @@ body,html {
   }
 
   .container{
-    max-width: 650px; /* Set your desired maximum width */
+    max-width: 650px; 
     width: 100%;
   }
 
@@ -353,62 +435,121 @@ body,html {
     align-items: center;
   }
   
-  .intro_name{
-    font-size: 19px;
-    text-align: left;
-    padding-right: 10px;
-    width: 75%
-  }
-
   #headshot{
     border-radius: 50%;
     width: 250px;
   }
 
-   /* ABOUT ME */
-  .about{
+  /* PROJECTS */
+  .imageContainer{
     display: flex;
-    flex-direction: row;
+    position: relative;
+    width: 100%; /* Set your desired width */
+    height: 300px; /* Set your desired height */
+    overflow: hidden;
+    background-color: white; 
     justify-content: center;
     align-items: center;
+    border-radius: 10px;
   }
 
-  .aboutMe{
-    padding-right: 20px;
-  }
-
-  #aboutMePhoto{
-    width: 300px;
-    padding-right: 40px;
-  }
-
-  /* PROJECTS */
-  .projects {
+  .projects{
     width: 100%;
-    height: 100%;
+    background-color: black;
+  }
+  #yogaProj, #beanstackProj, #parksProj{
+    margin: 20px;
+  }
+  .theProject {
+    display: grid;
+    grid-template-rows: repeat(1, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+    "imageContainer projectTextContainer";
+    /* max-width: 700px; 
+    margin: 0px; */
+  }
+  
+  .theProject.theProjectMiddle{
+    grid-template-areas:
+    "projectTextContainer imageContainer";
   }
 
-  .projectDescription{
-    color: white;
-    font-size: 15px;
-    margin-left: 25px;
-    margin-right: 25px;
+  .imageContainer {
+    grid-area: imageContainer;
+  }
+  
+  .projectTextContainer {
+    grid-area: projectTextContainer;
   }
 
   /* TECH STACK */ 
-  .toolboxContainer{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-row-gap: 20px;
-    margin-bottom: 55px;
+  .techstack{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
   }
 
-  .toolboxIcons{
-    font-size: 3em;
+  .toolboxContainer{
+    max-width: 650px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+  }
+
+  .techstack .sectionTitle{
+    text-align: left;
+    max-width: 650px;
   }
 
   #powershell{
     width: 43px;
+  }
+
+  /* ABOUT ME */
+  .about{
+    padding-bottom: 70px;
+  }
+
+  .sectionTitle{
+    padding-bottom: 10px;
+  }
+  .aboutSection{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-gap: 20px;
+  }
+
+  #aboutMePhoto{
+    width: 200px;
+    border-radius: 10px;
+  }
+
+  .aboutSection{
+    margin: 0px;
+  }
+  .aboutImg{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center
+  }
+  
+  .aboutBio, .aboutEducation {
+    margin: 0px;
+  }
+
+  .aboutSection h3{
+    margin-top: 0px;
+  }
+
+  .educationDetails{
+    margin-bottom: 20px;
+    font-size: 14px;
   }
 
   /* CONNECT */ 
@@ -416,28 +557,29 @@ body,html {
     margin: 0;
     padding: 0;
   }
-  
+
+  .connect h1{
+    font-size: 28px;
+    margin-left: 20px;
+  }
+
   .connectSection {
-    width: 100%;
-    height: 20vh; /* Full viewport height */
-    background-color: #eeeeff; 
-  }
-  
-  .connect {
-    background-color: #eeeeff; /* Pink background color */
-    box-sizing: border-box; /* Include padding in element's total width */
-    width: 100%;
-    height: 100%; /* Full height of the container */
-    text-align: center;
-    padding-left: 50px;
-    padding-right: 50px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
   }
 
-  .connect p{
-    font-size: 15px;
+  .connect{
+    max-width: 650px; 
+    width: 100%;
   }
 
-  .footer p{
+  .linkedinIcon, .emailIcon, .githubIcon{
+    color: white;
+    margin-left: 20px;
+  }
+
+  .footer{
     font-size: 14px;
   }
 }
@@ -454,24 +596,68 @@ body,html {
     margin-bottom: 5px;
   }
 
-  .projectDescription{
-    color: white;
-    font-size: 16px;
-    margin-left: 25px;
-    margin-right: 25px;
+  /* PROJECTS */
+  .imageContainer{
+    display: flex;
+    position: relative;
+    width: 100%; /* Set your desired width */
+    height: 300px; /* Set your desired height */
+    overflow: hidden;
+    background-color: white; 
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
   }
 
+  /* TECH STACK */ 
+  .techstack{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+  }
   .toolboxContainer{
+    max-width: 750px;
+    width: 100%;
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
   }
 
-  .toolboxIcons{
-    font-size: 3em;
+  .techstack .sectionTitle{
+    text-align: left;
+    max-width: 750px;
   }
 
   #powershell{
-    width: 42px;
+    width: 43px;
+  }
+
+  /* ABOUT ME */
+  .aboutSection{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-gap: 25px;
+  }
+
+  #aboutMePhoto{
+    width: 250px;
+    border-radius: 10px;
+  }
+
+  /* CONNECT */
+  .connectSection {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .connect{
+    max-width: 750px; 
+    width: 100%;
+    padding-bottom: 30px;
   }
 }
 
@@ -481,6 +667,56 @@ body,html {
     width: 100%;
   }
 
+  /* TECH STACK */ 
+  .techstack{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .toolboxContainer{
+    max-width: 850px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 25px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+  }
+
+  .techstack .sectionTitle{
+    text-align: left;
+    max-width: 850px;
+  }
+
+  #powershell{
+    width: 43px;
+  }
+
+  /* ABOUT ME */
+  .aboutSection{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-gap: 30px;
+  }
+
+  #aboutMePhoto{
+    width: 280px;
+    border-radius: 10px;
+  }
+
+  /* CONNECT */ 
+  .connectSection {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .connect{
+    max-width: 850px; 
+    width: 100%;
+    padding-bottom: 30px;
+  }
   
 }
 
@@ -490,9 +726,99 @@ body,html {
     width: 100%;
   }
 
-  li {
-    display: flex;
-    flex-direction: column; /* Display text under each list item */
-    margin: 35px 40px 35px 40px;;
+  .sectionTitle{
+    padding-top: 10px;
+    margin: 15px;
+    width: 100%;
+    max-width: 1000px;
+  }
+
+  /* PROJECTS */
+  .projects{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .theProject{
+    margin: 0px;
+  }
+
+  /* TECH STACK */ 
+  .techstack{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .techstack .sectionTitle{
+    text-align: left;
+    max-width: 1000px;
+  }
+  .allProjects{
+    max-width: 1000px; 
+  }
+  .toolboxContainer{
+    max-width: 1000px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+  }
+
+  #powershell{
+    width: 43px;
+  }
+
+  /* ABOUT ME */
+  .aboutSection{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-gap: 32px;
+  }
+
+  #aboutMePhoto{
+    width: 300px;
+    border-radius: 10px;
+  }
+
+  .aboutBio{
+    font-size: 18px;;
+  }
+
+  .educationDetails{
+    font-size: 16.5px;
+  }
+
+  /* CONNECT */
+  .connectSection{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .connectSection {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .connect{
+    max-width: 1000px; 
+    width: 100%;
+    padding-bottom: 30px;
+  }
+
+  .connect h1{
+    font-size: 25px;
+    margin-left: 0px;
+  }
+
+  .linkedinIcon, .emailIcon, .githubIcon{
+    color: white;
+    margin-left: 0px;
   }
 }

@@ -18,6 +18,15 @@
 </head>
 
 <body>
+  <nav class="navbar">
+    <img src="images/el_logo_blue.png" alt="" id="navLogo">
+    <ul>
+      <li><a href="#theProjects">PROJECTS</a></li>
+      <li><a href="#theToolbox">TOOLBOX</a></li>
+      <li><a href="#theAboutMe">ABOUT</a></li>
+    </ul>
+  </nav>
+
   <div class="container">
     <!--- INTRO --->
     <div class='intro'>
@@ -29,143 +38,160 @@
         <img src="images/elaine_headshot.jpg" alt="Elaine Lai" id="headshot">
       </div>
     </div>
-    
-    <!--- PROJECTS --->
-    <h1 id="projectsTitle">Projects <span id="exploreProjectHover"><i class="fa-solid fa-circle-exclamation"></i> (hover over the project to learn more!)</span></h1>  
-    <div class='projects'>
-      <div class="grid-container">
-  
-        <div class="grid-item one"> 
-          <img src="images/lappy_purpleaiyoga.png" alt="1" id="yoga">
-          <div class="overlay">
-            <div class="gridText">
-              AI Yoga Coach
-              <p class="projectDescription">A machine learning project that identifies and gives feedback on five yoga poses.</p>
-            </div>
-            <div>
-              <a href="https://drive.google.com/file/d/1-fbMAlXnxRTlCHyrUv21_oSlku6xnnEi/view?usp=sharing" target="_blank"><button>Live Demo</button></a>
-              <a href="https://github.com/elaine-lai/ai_yoga_coach" target="_blank"><button>GitHub</button></a>
-            </div>
-          </div>
-        </div>
-  
-        <div class="grid-item two"> 
-          <img src="images/ipad_beanstack.png" alt="2" id="shoppingCart">
-          <div class="overlay">
-            <div class="gridText">
-              Shopping Cart
-              <p class="projectDescription">A React.js front-end shopping cart for selling coffee beans.</p>
-            </div>
-            <div>
-              <a href="https://beanstackbrew-shoppingcart.vercel.app/" target="_blank"><button>Live Demo</button></a>
-              <a href="https://github.com/elaine-lai/react_shopping_cart" target="_blank"><button>GitHub</button></a>
-            </div>
-          </div>
-        </div>
-
-        <div class="grid-item three"> 
-          <img src="images/desktop_bcparks_spacetop.png" alt="3" >
-          <div class="overlay">
-            <div class="gridText">
-              Campsite Filter
-              <p class="projectDescription">Site for users to find BC Parks campsites based on park amenities.</p>
-            </div>
-            <div>
-              <a href="https://bcparks-filteramenity.vercel.app/" target="_blank"><button>Live Demo</button></a>
-              <a href="https://github.com/elaine-lai/bcParks_amenityFilter" target="_blank"><button>GitHub</button></a>
-            </div>
-          </div>
-        </div>
-  
-        <div class="grid-item four"> 
-          <img src="images/wip_happy.png" alt="4">
-          <div class="overlay">
-            <div class="gridText">
-              Work in Progress
-              <p class="projectDescription">Stay tuned as I create something special! <i class="fa-solid fa-heart"></i></p>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  
-    <!--- ABOUT ME --->
-    <div class='about'>
-      <div class= "aboutMe">
-        <h1>About Me</h1>
-        <p>
-          Hello, my name is Elaine and I love to create! I have a passion for coding & baking as both requires me to build something from scratch. The beauty of my passion is that I get to reap the benefits of what I've created, whether that's a program or a sweet snack!
-          </br></br>
-          I have a background in Criminology, and recently graduated from the computer science program at BCIT. I am currently seeking software development roles. I am interested in backend development, cloud technologies and streamlining processes to increase efficiency. 
-          </br></br>
-          When I'm not at my desk, you can find me playing sports such as volleyball, ultimate, and going on hikes. I've also recently gotten into reading and running, and would love for any book recommendations or running tips for a half marathon!
-        </p>
-      </div>
-  
-      <div class="image2">
-        <img src="images/elaine_pic_2.jpg" alt="Elaine Lai" id="aboutMePhoto">
-      </div>
-    </div>
-    
-    <!--- TOOLBOX --->
-    <div class='techstack'>
-      <h1>Toolbox</h1>
-      <div class="toolboxContainer">
-        <div class="toolboxItem">
-          <i class="fa-brands fa-python toolboxIcons"></i>
-          <p>Python</p></div>
-        <div class="toolboxItem">
-          <img src="images/icons/powershell.svg" alt="" id="powershell" />
-          <p>PowerShell</p></div>
-        <div class="toolboxItem">
-          <i class="fa-brands fa-node toolboxIcons"></i>
-          <p>Node.js</p></div>
-        <div class="toolboxItem">
-          <i class="fa-brands fa-js toolboxIcons"></i>
-          <p>JavaScript</p></div>
-        <div class="toolboxItem">
-          <i class="fa-brands fa-react toolboxIcons"></i>
-          <p>React</p></div>
-        <div class="toolboxItem">
-          <i class="fa-brands fa-aws toolboxIcons"></i>
-          <p>AWS</p></div>
-        <div class="toolboxItem">
-          <i class="fa-brands fa-css3-alt toolboxIcons"></i>
-          <p>CSS</p></div>
-        <div class="toolboxItem">
-          <i class="fa-brands fa-html5 toolboxIcons"></i>
-          <p>HTML</p></div>
-        <div class="toolboxItem">
-          <i class="fa-solid fa-database toolboxIcons"></i>
-          <p>MySQL</p></div>
-        <div class="toolboxItem">
-          <i class="fa-brands fa-bootstrap toolboxIcons"></i>
-          <p>Bootstrap</p></div>
-        <div class="toolboxItem">
-          <i class="fa-brands fa-java toolboxIcons"></i>
-          <p>Java</p></div>
-        <div class="toolboxItem">
-          <i class="fa-brands fa-github toolboxIcons"></i>
-          <p>GitHub</p></div>
-      </div>
-    </div>
   </div>
+    <!--- PROJECTS --->
+      <div class='projects' id="theProjects">
+        <h2 class="sectionTitle">Projects</h2>  
+        <div class="allProjects">
+
+          <div class="theProject">
+            <div class="imageContainer">
+              <img src="images/laptop_aiyoga_blue.png" alt="1" id="yogaImg">
+            </div>
+            <div className="projectTextContainer" id="yogaProj">
+              <h3 class="projectTitle">AI Yoga Coach</h3>
+              <p class="projectDescription">A machine learning project that identifies and gives feedback on five yoga poses.</p>
+              <p class="projectDescription"><span class="technologiesBold">Technologies:</span> Python, MoveNet, Pandas</p>
+              <div class="projectButtons">
+                <a href="https://drive.google.com/file/d/1-fbMAlXnxRTlCHyrUv21_oSlku6xnnEi/view?usp=sharing" target="_blank"><button>See the live demo</button></a>
+                <a href="https://github.com/elaine-lai/ai_yoga_coach" target="_blank"><button>View GitHub</button></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="theProject theProjectMiddle">
+            <div class="imageContainer">
+              <img src="images/bbfull_top.png" alt="2" id="shoppingCartImg">
+            </div>
+            <div className="projectTextContainer theProjectMiddle" id="beanstackProj">
+              <h3 class="projectTitle">Shopping Cart</h3>
+              <p class="projectDescription">A React.js front-end shopping cart for selling coffee beans.</p>
+              <p class="projectDescription"><span class="technologiesBold">Technologies:</span> ReactJS, JavaScript, HTML, CSS</p>
+              <div class="projectButtons">
+                <a href="https://beanstackbrew-shoppingcart.vercel.app/" target="_blank"><button>See the live demo</button></a>
+                <a href="https://github.com/elaine-lai/react_shopping_cart" target="_blank" ><button>View GitHub</button></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="theProject">
+            <div class="imageContainer">
+              <img src="images/desktop_bcparks.png" alt="3" id="parksImg">
+            </div>
+            <div className="projectTextContainer" id="parksProj">
+              <h3 class="projectTitle">Campsite Filter</h3>
+              <p class="projectDescription">Site for users to find BC Parks campsites based on park amenities.</p>
+              <p class="projectDescription"><span class="technologiesBold">Technologies:</span> JavaScript, HTML, CSS, PupeeteerJS </p>
+              <div class="projectButtons">
+                <a href="https://bcparks-filteramenity.vercel.app/" target="_blank"><button>See the live demo</button></a>
+                <a href="https://github.com/elaine-lai/bcParks_amenityFilter" target="_blank"><button>View GitHub</button></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--- TOOLBOX --->
+      <div class='techstack' id="theToolbox">
+        <h2 class="sectionTitle">Toolbox</h2>
+        <div class="toolboxContainer">
+          <div class="toolboxItem">
+            <i class="fa-brands fa-python toolboxIcons"></i>
+            <p>Python</p></div>
+          <div class="toolboxItem">
+            <img src="images/icons/powershell.svg" alt="" id="powershell" />
+            <p>PowerShell</p></div>
+          <div class="toolboxItem">
+            <i class="fa-brands fa-node toolboxIcons"></i>
+            <p>Node.js</p></div>
+          <div class="toolboxItem">
+            <i class="fa-brands fa-js toolboxIcons"></i>
+            <p>JavaScript</p></div>
+          <div class="toolboxItem">
+            <i class="fa-brands fa-react toolboxIcons"></i>
+            <p>React</p></div>
+          <div class="toolboxItem">
+            <i class="fa-brands fa-aws toolboxIcons"></i>
+            <p>AWS</p></div>
+          <div class="toolboxItem">
+            <i class="fa-brands fa-css3-alt toolboxIcons"></i>
+            <p>CSS</p></div>
+          <div class="toolboxItem">
+            <i class="fa-brands fa-html5 toolboxIcons"></i>
+            <p>HTML</p></div>
+          <div class="toolboxItem">
+            <i class="fa-solid fa-database toolboxIcons"></i>
+            <p>MySQL</p></div>
+          <div class="toolboxItem">
+            <i class="fa-brands fa-bootstrap toolboxIcons"></i>
+            <p>Bootstrap</p></div>
+          <div class="toolboxItem">
+            <i class="fa-brands fa-java toolboxIcons"></i>
+            <p>Java</p></div>
+          <div class="toolboxItem">
+            <i class="fa-brands fa-github toolboxIcons"></i>
+            <p>GitHub</p></div>
+        </div>
+      </div>
+      
+      <div class="container">
+        <!--- ABOUT ME --->
+        <div class='about' id="theAboutMe">
+          <h2 class="sectionTitle">About Me</h2>
+
+          <div class= "aboutSection">
+            <div class="aboutImg">
+              <img src="images/elaine_pic_2.jpg" alt="Elaine Lai" id="aboutMePhoto">
+            </div>
+            <div class="aboutBio">
+              <h3>Bio</h3>
+              <p>
+                Hello, my name is Elaine and I love to create! I have a passion for coding & baking as both requires me to build something from scratch. The beauty of my passion is that I get to reap the benefits of what I've created, whether that's a program or a sweet snack!
+                </br></br>
+                I am currently seeking software development roles. I am interested in backend development, cloud technologies and streamlining processes to increase efficiency. 
+                </br></br>
+                When I'm not at my desk, you can find me playing sports such as volleyball, ultimate, and going on hikes. I've also recently gotten into reading and running, and would love for any book recommendations or running tips for a half marathon!
+              </p>
+            </div>
+            <div class="aboutEducation">
+              <h3>Education</h3>
+              <div class="educationDetails">
+                <p class="educationYear">2023</p>
+                <p>British Columbia Institute of Technology - Computer Systems Technology Diploma</p>
+              </div>
+              <div class="educationDetails">
+                <p class="educationYear">2020</p>
+                <p>Simon Fraser University - Bachelor of Arts and Social Sciences, Criminology Major</p>
+              </div>
+            </div>
+          </div>
+    
+      </div>
+    </div>
 
   <!--- CONNECT --->
   <div class="connectSection">
     <div class='connect'>
-      <div>
-        <h1>Connect with me on LinkedIn! <a href="https://www.linkedin.com/in/el-aine/" target="_blank"><i class="fa-brands fa-linkedin" id="linkedinProfile"></i></a></h1>
-        <p>Always happy to grab coffee, make new friends, and to learn about any open opportunities!</p>
+        <h1>Let's Chat!</h1>
+        <div class="connectTools">
+          <div>
+            <a href="https://www.linkedin.com/in/el-aine/" target="_blank"><i class="fa-brands fa-linkedin linkedinIcon" id="linkedinProfile"></i><span id="linkedinProfileSpan"> linkedin.com/in/el-aine</span></a>
+          </div>
+          <div>
+            <i class="fa-regular fa-envelope emailIcon"></i> <span>ylai.elaine@gmail.com</span>
+          </div>
+          <div>
+            <i class="fa-brands fa-github githubIcon"></i> <span>elaine-lai</span>
+          </div>
+        </div>
       </div>
+      <!-- <p class="typingName">ELAINE LAI ELAINE LAI ELAINE LAI ELAINE LAI ELAINE LAI ELAINE LAI ELAINE LAI ELAINE LAI ELAINE LAI ELAINE LAI ELAINE LAI ELAINE LAI</p> -->
     </div>
+
     <div class="footer">
-      <p>
-        Developed and built with a personal touch - Elaine Lai
-        <img src="images/el_logo.png" alt="" id="elLogo">
-      </p>
-    </div>
+    <p>
+      Designed by me - Elaine Lai, Designed by <a href="https://www.tiffanyzhong.art/" target="_blank">Tiffany Zhong</a>.
+    </p>
   </div>
 </body>
 </html>
